@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCalcularFrete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFreteMinimo = new System.Windows.Forms.TextBox();
-            this.txtUf = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtTotalFrete = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtFreteMinimo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCalcularFrete = new System.Windows.Forms.Button();
+            this.cbxUF = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -55,20 +55,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CALCULAR FRETE";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtUf);
-            this.groupBox2.Controls.Add(this.txtFreteMinimo);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnCalcularFrete);
-            this.groupBox2.Location = new System.Drawing.Point(25, 37);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(688, 239);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "DADOS DO PACOTE";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtTotalFrete);
@@ -80,47 +66,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DADOS DO FRETE";
             // 
-            // btnCalcularFrete
+            // txtTotalFrete
             // 
-            this.btnCalcularFrete.Location = new System.Drawing.Point(6, 188);
-            this.btnCalcularFrete.Name = "btnCalcularFrete";
-            this.btnCalcularFrete.Size = new System.Drawing.Size(194, 45);
-            this.btnCalcularFrete.TabIndex = 0;
-            this.btnCalcularFrete.Text = "CALCULAR FRETE";
-            this.btnCalcularFrete.UseVisualStyleBackColor = true;
-            this.btnCalcularFrete.Click += new System.EventHandler(this.btnCalcularFrete_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "FRETE MINIMO";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "UF";
-            // 
-            // txtFreteMinimo
-            // 
-            this.txtFreteMinimo.Location = new System.Drawing.Point(163, 42);
-            this.txtFreteMinimo.Name = "txtFreteMinimo";
-            this.txtFreteMinimo.Size = new System.Drawing.Size(139, 29);
-            this.txtFreteMinimo.TabIndex = 3;
-            // 
-            // txtUf
-            // 
-            this.txtUf.Location = new System.Drawing.Point(163, 78);
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(139, 29);
-            this.txtUf.TabIndex = 4;
+            this.txtTotalFrete.Location = new System.Drawing.Point(163, 58);
+            this.txtTotalFrete.Name = "txtTotalFrete";
+            this.txtTotalFrete.Size = new System.Drawing.Size(139, 29);
+            this.txtTotalFrete.TabIndex = 1;
             // 
             // label3
             // 
@@ -131,12 +82,67 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "TOTAL FRETE";
             // 
-            // txtTotalFrete
+            // groupBox2
             // 
-            this.txtTotalFrete.Location = new System.Drawing.Point(163, 58);
-            this.txtTotalFrete.Name = "txtTotalFrete";
-            this.txtTotalFrete.Size = new System.Drawing.Size(139, 29);
-            this.txtTotalFrete.TabIndex = 1;
+            this.groupBox2.Controls.Add(this.cbxUF);
+            this.groupBox2.Controls.Add(this.txtFreteMinimo);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnCalcularFrete);
+            this.groupBox2.Location = new System.Drawing.Point(25, 37);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(688, 239);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "DADOS DO PACOTE";
+            // 
+            // txtFreteMinimo
+            // 
+            this.txtFreteMinimo.Location = new System.Drawing.Point(163, 42);
+            this.txtFreteMinimo.Name = "txtFreteMinimo";
+            this.txtFreteMinimo.Size = new System.Drawing.Size(139, 29);
+            this.txtFreteMinimo.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "UF";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "FRETE MINIMO";
+            // 
+            // btnCalcularFrete
+            // 
+            this.btnCalcularFrete.Location = new System.Drawing.Point(6, 188);
+            this.btnCalcularFrete.Name = "btnCalcularFrete";
+            this.btnCalcularFrete.Size = new System.Drawing.Size(194, 45);
+            this.btnCalcularFrete.TabIndex = 0;
+            this.btnCalcularFrete.Text = "CALCULAR FRETE";
+            this.btnCalcularFrete.UseVisualStyleBackColor = true;
+            this.btnCalcularFrete.Click += new System.EventHandler(this.btnCalcularFrete_Click);
+            // 
+            // cbxUF
+            // 
+            this.cbxUF.FormattingEnabled = true;
+            this.cbxUF.Items.AddRange(new object[] {
+            "RS",
+            "SC",
+            "PR",
+            "SP"});
+            this.cbxUF.Location = new System.Drawing.Point(163, 77);
+            this.cbxUF.Name = "cbxUF";
+            this.cbxUF.Size = new System.Drawing.Size(139, 33);
+            this.cbxUF.TabIndex = 5;
             // 
             // Form1
             // 
@@ -147,10 +153,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,10 +169,10 @@
         private System.Windows.Forms.Button btnCalcularFrete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUf;
         private System.Windows.Forms.TextBox txtFreteMinimo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotalFrete;
+        private System.Windows.Forms.ComboBox cbxUF;
     }
 }
 
